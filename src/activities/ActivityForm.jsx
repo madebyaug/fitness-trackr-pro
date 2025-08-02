@@ -16,7 +16,7 @@ export default function ActivityForm() {
 
   return (
     <>
-      <h2>Add a new activity</h2>
+      <h2>Add New Activity</h2>
       <form action={addActivity}>
         <label>
           Name
@@ -26,7 +26,7 @@ export default function ActivityForm() {
           Description
           <input type="text" name="description" />
         </label>
-        <button>{loading ? "Adding..." : "Add activity"}</button>
+        <button>{loading ? "Adding..." : "Add Activity"}</button>
         {error && <output>{error}</output>}
       </form>
     </>

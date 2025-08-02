@@ -6,38 +6,82 @@
 
 form,
 label,
-main {
-  display: grid;
+main,
+ul,
+ol,
+#root,
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
+:is(#root, main, h2, h3) {
+  row-gap: 1rem;
+}
+
+:is(form, nav) {
   gap: 0.5rem;
 }
 
+:is(ol, ul, label, section) {
+  gap: 0.25rem;
+}
+
 #root {
-  width: 45ch;
+  width: 50ch;
   margin: 0 auto;
   padding: 1rem;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  margin: 0.5rem 0;
-}
-
-header nav {
-  display: flex;
-  gap: 1ch;
+  background: #fff;
 }
 
 a {
   color: teal;
 }
 
-a:hover {
+a:hover,
+.active {
   cursor: pointer;
   text-decoration: underline;
 }
 
-ul,
-ol {
-  padding-left: 1rem;
+body {
+  background: lightgray;
+}
+
+button {
+  display: block;
+  padding: 3px;
+  height: 20px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+header,
+li {
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  height: 20px;
+  background: #eee;
+  border: none;
+}
+
+li,
+i {
+  height: 25px;
+  border-bottom: 1px solid #eee;
+  /* align-items: center; */
+}
+
+nav a {
+  text-decoration: none;
 }
